@@ -1,4 +1,8 @@
+
+<%=debug(params)%>
 <h3>Comments</h3>
+
+
 <% @post.comments.each do |comment| %>
   <div class="well">
   <p><strong><%=comment.username %></strong>: <%=comment.body %>
