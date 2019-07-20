@@ -8,14 +8,17 @@ class PostsController < ApplicationController
   end
 
   def new
-
+    @post = Post.new
   end
 
   def create
     #render plain: params[:post].inspect
     @post = Post.new(post_params)
-    @post.save
-    redirect_to @post #to load show view
+    if (@post.save)
+      redirect_to @post #to load show view
+    else
+      render 'new' 
+    end
   end
 
   
