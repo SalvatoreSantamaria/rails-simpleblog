@@ -5,4 +5,7 @@ Rails.application.routes.draw do
 
   #Example of a regular route with get request. it goes to the page controller
   get 'about' => 'pages#about'
+
+  #Example resource route with options
+  resources :posts
 end
